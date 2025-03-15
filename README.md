@@ -36,13 +36,19 @@ Donde la **url** para este proyecto se utilizo un generador de json falsos, para
 
 --- 
 ### ⚙️ Uso
-Desde la linea de comandos del SO, para este caso desde PowerShell, se ejecuta lo siguiente:
+Desde la línea de comandos del sistema operativo, en este caso PowerShell, ejecuta:
 
 ```bash
 curl -Headers @{ "X-Cache" = "MISS/HIT" } http://localhost:<port>/?url=products
 ```
 Donde el **port** es el puerto ingresado por el usuario.
 
+--- 
+## Extras:
+
+![image](https://github.com/user-attachments/assets/5cf568e9-814d-4741-aa29-4a3e8ed53ad5)
+
+📢 Este proyecto fue inspirado en [roadmap.sh](https://roadmap.sh/projects/caching-server)
 
 
 
