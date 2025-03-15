@@ -28,4 +28,18 @@ Cuando un cliente hace una solicitud, el proxy verifica si ya tiene la respuesta
 go run .\main.go -port <port> -origin <url>
 ```
 
+```bash
+go run .\main.go -port <port> -origin <url> clear-cache true/false
+```
+--- 
+### ⚙️ Uso
+Desde la linea de comandos del SO, para este caso desde PowerShell, se ejecuta lo siguiente:
+
+```bash
+curl -Headers @{ "X-Cache" = "MISS/HIT" } http://localhost:<port>/?url=products
+```
+Donde el **port** es el puerto ingresado por el usuario.
+
+
+
 
