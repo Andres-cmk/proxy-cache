@@ -48,6 +48,8 @@ Donde el **port** es el puerto ingresado por el usuario.
 ## Extras:
 
 ![image](https://github.com/user-attachments/assets/5cf568e9-814d-4741-aa29-4a3e8ed53ad5)
+![image](https://github.com/user-attachments/assets/65eca70a-e96f-4ffa-a1ec-8f85bd95bcc5)
+
 
 📢 Este proyecto fue inspirado en [roadmap.sh](https://roadmap.sh/projects/caching-server)
 
