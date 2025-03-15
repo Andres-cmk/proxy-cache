@@ -32,6 +32,7 @@ go run .\main.go -port <port> -origin <url> clear-cache true/false
 ```
 
 Donde la **url** para este proyecto se utilizo un generador de json falsos, para mas información presione [aqui](http://dummyjson.com)
+y el parametro **clear-cache** permite borrar todas las request almacenadas en la memoria. Por defecto es **false**.
 
 
 --- 
