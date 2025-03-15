@@ -25,7 +25,7 @@ Cuando un cliente hace una solicitud, el proxy verifica si ya tiene la respuesta
 ---
 **Compila el proyecto y ejecuta:**
 ```bash
-go run .\main.go -port 8080 -origin http://dummyjson.com
+go run .\main.go -port <port> -origin <url>
 ```
 
 
