@@ -8,7 +8,7 @@ import (
 
 type CacheObject struct {
 	StatusCode   int
-	Headers      map[string]string
+	Headers      string
 	ResponseBody string
 	Created      time.Time
 	ExpireAt     time.Time
@@ -27,7 +27,7 @@ func NewCache() *Cache {
 	}
 }
 
-func (c *Cache) Store(url *string, value *CacheObject, duration time.Duration) bool {
+func (c *Cache) Store(url *string, value *CacheObject) bool {
 	if value == nil {
 		return false
 	}
@@ -43,6 +43,13 @@ func (c *Cache) ClearAll() {
 	defer c.mu.Unlock()
 	c.data = make(map[string]*CacheObject)
 	log.Print("Clearing all cache objects...")
+}
+
+func (c *Cache) ClearRegister(url *string) bool {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	delete(c.data, *url)
+	return true
 }
 
 func (c *Cache) Get(url string) (*CacheObject, bool) {
