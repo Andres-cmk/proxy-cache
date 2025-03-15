@@ -30,7 +30,10 @@ go run .\main.go -port <port> -origin <url>
 ```bash
 go run .\main.go -port <port> -origin <url> clear-cache true/false
 ```
-Donde **url** para se utilizo 
+
+Donde la **url** para este proyecto se utilizo un generador de json falsos, para mas información presione [aqui](http://dummyjson.com)
+
+
 --- 
 ### ⚙️ Uso
 Desde la linea de comandos del SO, para este caso desde PowerShell, se ejecuta lo siguiente:
