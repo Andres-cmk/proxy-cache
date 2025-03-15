@@ -21,5 +21,11 @@ Cuando un cliente hace una solicitud, el proxy verifica si ya tiene la respuesta
 ```bash
  git clone https://github.com/Andres-cmk/proxy-cache.git
  cd caching-proxy
+```
 ---
 **Compila el proyecto y ejecuta:**
+```bash
+go run .\main.go -port 8080 -origin http://dummyjson.com
+```
+
+
