@@ -1,7 +1,7 @@
 # 🚀 Caching Proxy
 
 ## 📌 Descripción
-`Caching Proxy` es un servidor proxy con caché implementado en **Go**, que almacena las respuestas de las solicitudes HTTP para mejorar el rendimiento y reducir la carga en el servidor de origen.
+`Caching Proxy` es un servidor proxy con caché implementado en **Go**, que almacena las respuestas de las solicitudes HTTP para mejorar el rendimiento y reducir la carga en el servidor de origen. Este proyecto recibe importantes parametros por la linea de comandos del SO.
 
 Cuando un cliente hace una solicitud, el proxy verifica si ya tiene la respuesta en caché. Si la encuentra (`HIT`), la devuelve directamente sin reenviar la solicitud al servidor. Si no está en caché (`MISS`), obtiene la respuesta del servidor de origen, la almacena en caché y la envía al cliente.
 
