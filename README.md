@@ -28,7 +28,7 @@ Cuando un cliente hace una solicitud, el proxy verifica si ya tiene la respuesta
 go run .\main.go -port <port> -origin <url>
 ```
 ```bash
-go run .\main.go -port <port> -origin <url> -clear-cache true/false
+go run .\main.go -port <port> -origin <url> -clear-cache=true/false
 ```
 
 Donde la **url** para este proyecto se utilizo un generador de json falsos, para mas información presione [aqui](http://dummyjson.com)
