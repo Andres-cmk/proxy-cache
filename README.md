@@ -19,5 +19,7 @@ Cuando un cliente hace una solicitud, el proxy verifica si ya tiene la respuesta
 
 **Clona este repositorio:**
 ```bash
- git clone 
+ git clone https://github.com/Andres-cmk/proxy-cache.git
  cd caching-proxy
+---
+**Compila el proyecto y ejecuta:**
