@@ -1,7 +1,7 @@
 package main
 
 import (
-	"chaching-proxy/cache"
+	"chaching-proxy/server"
 	"flag"
 	"log"
 	"net/http"
@@ -13,14 +13,18 @@ func main() {
 	urlTarget := flag.String("origin", "", "-url")
 	clearCache := flag.Bool("clear-cache", false, "-clear-cache")
 	flag.Parse()
-	StartServer(port, clearCache, urlTarget)
-}
 
-func StartServer(port *string, clearCache *bool, target *string) {
-	newCache := cache.NewCache()
-	if *clearCache == true {
-		newCache.ClearAll()
+	proxyServer := server.NewProxy(*urlTarget)
+
+	http.HandleFunc("/", proxyServer.HandleHTTP)
+
+	log.Println("Starting proxy server: ", proxyServer)
+
+	if *clearCache {
+		proxyServer.ClearCache()
 	}
+
 	log.Print("Listening on port " + *port + "...")
 	_ = http.ListenAndServe(":"+*port, nil)
+
 }
